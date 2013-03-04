@@ -8,9 +8,12 @@ Gem::Specification.new do |gem|
   gem.version       = Burocracias::VERSION
   gem.authors       = ["Neil Carvalho"]
   gem.email         = ["me@neil.pro"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = %q{Métodos para facilitar o tratamento de CEP, CPF, CNPJ e outras burocracias do nosso Brasil}
+  gem.summary       = %q{Burocracias do nosso Brasil}
   gem.homepage      = ""
+
+  gem.add_development_dependency 'rspec'
+  gem.add_development_dependency 'rake'
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
