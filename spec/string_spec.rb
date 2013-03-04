@@ -16,4 +16,10 @@ describe String do
       '12345678'.as_cep.should eq '12.345-678'
     end
   end
+
+  describe '#as_phone_number' do
+    it 'formats string as phone number' do
+      '1122223333'.as_phone_number.should eq '(11) 2222-3333'
+    end
+  end
 end

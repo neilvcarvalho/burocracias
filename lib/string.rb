@@ -10,4 +10,8 @@ class String
   def as_cep
     Burocracias::Masks.format_cep(self)
   end
+
+  def as_phone_number
+    Burocracias::Masks.format_phone_number(self)
+  end
 end
