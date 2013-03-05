@@ -5,7 +5,7 @@ module Burocracias
   class Masks
     def self.format_cpf(string)
       if string.length <= 11
-        ("%011d" % string).insert(9, '-').insert(6, '.').insert(3, '.')
+        string.to_s.rjust(11, '0').insert(9, '-').insert(6, '.').insert(3, '.')
       else
         string
       end
@@ -13,7 +13,7 @@ module Burocracias
 
     def self.format_cnpj(string)
       if string.length <= 14
-        ("%014d" % string).insert(12, '-').insert(8, '/').insert(5, '.').insert(2, '.')
+        string.to_s.rjust(14, '0').insert(12, '-').insert(8, '/').insert(5, '.').insert(2, '.')
       else
         string
       end
@@ -21,7 +21,7 @@ module Burocracias
 
     def self.format_cep(string)
       if string.length <= 8
-        ("%08d" % string).insert(5, '-').insert(2, '.')
+        string.to_s.rjust(8, '0').insert(5, '-').insert(2, '.')
       else
         string
       end
