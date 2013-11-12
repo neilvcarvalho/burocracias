@@ -13,7 +13,7 @@ describe String do
 
   describe '#as_cep' do
     it 'formats string as CEP' do
-      '12345678'.as_cep.should eq '12.345-678'
+      '12345678'.as_cep.should eq '12345-678'
     end
   end
 

@@ -21,7 +21,7 @@ module Burocracias
 
     def self.format_cep(string)
       if string.length <= 8
-        string.to_s.rjust(8, '0').insert(5, '-').insert(2, '.')
+        string.to_s.rjust(8, '0').insert(5, '-')
       else
         string
       end

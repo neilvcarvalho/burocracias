@@ -50,13 +50,13 @@ module Burocracias
       context 'string has length of 8 characters' do
         it 'returns string as 99.999-999' do
           cep = '20921005'
-          Masks.format_cep(cep).should eq '20.921-005'
+          Masks.format_cep(cep).should eq '20921-005'
         end
       end
       context 'string has less than 8 characters' do
         it 'adds zeroes to fill 8 characters and masks it' do
           cep = '20921'
-          Masks.format_cep(cep).should eq '00.020-921'
+          Masks.format_cep(cep).should eq '00020-921'
         end
       end
       context 'string has more than 8 characters' do
